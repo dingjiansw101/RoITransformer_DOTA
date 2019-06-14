@@ -110,12 +110,13 @@ cd ${RoI_ROOT}
 ```
 
 1. training
-Please download ImageNet-pretrained ResNet-v1-101 model manually from [OneDrive](https://1drv.ms/u/s!Am-5JzdW2XHzhqMEtxf1Ciym8uZ8sg), or [BaiduYun](https://pan.baidu.com/s/1YuB5ib7O-Ori1ZpiGf8Egw#list/path=%2F), or [Google drive](https://drive.google.com/open?id=1b6P-UMaBBpMPlcgvc38dMToPAa_Gyu6F), and put it under folder `./model`. Make sure it look like this:
+    Please download ImageNet-pretrained ResNet-v1-101 model manually from [OneDrive](https://1drv.ms/u/s!Am-5JzdW2XHzhqMEtxf1Ciym8uZ8sg), or [BaiduYun](https://pan.baidu.com/s/1YuB5ib7O-Ori1ZpiGf8Egw#list/path=%2F), or [Google drive](https://drive.google.com/open?id=1b6P-UMaBBpMPlcgvc38dMToPAa_Gyu6F), and put it under folder `./model`. Make sure it look like this:
 
 	```
 	./model/pretrained_model/resnet_v1_101-0000.params
 	```
-Start training (we use the Light-head R-CNN + RoI Transformer for example, you may choose other models)
+
+    Start training (we use the Light-head R-CNN + RoI Transformer for example, you may choose other models)
 
     ```
       sh train_dota_light_RoITransformer.sh
@@ -123,11 +124,11 @@ Start training (we use the Light-head R-CNN + RoI Transformer for example, you m
 
 2. testing
 
-Start testing
+    Start testing
 
-```
-  sh test_dota_light_RoITransformer.sh
-```
+    ```
+    sh test_dota_light_RoITransformer.sh
+    ```
 
 
 ---------------------------------------------------
