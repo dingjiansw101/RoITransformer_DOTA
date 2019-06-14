@@ -115,14 +115,15 @@ Please download ImageNet-pretrained ResNet-v1-101 model manually from [OneDrive]
 	```
 	./model/pretrained_model/resnet_v1_101-0000.params
 	```
-start training (we use the Light-head R-CNN + RoI Transformer for example, you may choose other models)
+Start training (we use the Light-head R-CNN + RoI Transformer for example, you may choose other models)
+
     ```
       sh train_dota_light_RoITransformer.sh
     ```
 
 2. testing
 
-start testing
+Start testing
 
 ```
   sh test_dota_light_RoITransformer.sh
