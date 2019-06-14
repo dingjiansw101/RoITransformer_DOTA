@@ -68,7 +68,7 @@ git clone git@github.com:dingjiansw101/RoITransformer_DOTA.git
 
 ## Prepare DOTA Data:
 
-1.Prepare script
+1. Prepare script
    put your original dota data (before split) in path_to_data
    make sure it looks like
    ```
@@ -81,7 +81,7 @@ git clone git@github.com:dingjiansw101/RoITransformer_DOTA.git
    cd ${RoI_ROOT}/prepare_data
    python prepare_data.py --data_path path_to_data --num_process 32
    ```
-2.Create soft link
+2. Create soft link
 
    ```
    cd ${RoI_ROOT}
@@ -107,14 +107,14 @@ We provide trained convnet models.
 cd ${RoI_ROOT}
 ```
 
-1.training
+1. training
 
 
 ```
   sh train_dota_light_RoITransformer.sh
 ```
 
-2.testing
+2. testing
 
 ```
   sh test_dota_light_RoITransformer.sh
