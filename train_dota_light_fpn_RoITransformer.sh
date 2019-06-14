@@ -1,0 +1,1 @@
+python experiments/fpn/fpn_end2end_train_test_RoITransformer.py --cfg experiments/fpn/cfgs/resnet_v1_101_dota_rotbox_light_head_RoITransformer_trainval_fpn_end2end.yaml

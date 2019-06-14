@@ -1,0 +1,1 @@
+python experiments/faster_rcnn/test_poly.py --cfg experiments/faster_rcnn/cfgs/resnet_v1_101_dota_RoITransformer_trainval_rcnn_end2end.yaml
