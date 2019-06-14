@@ -119,7 +119,7 @@ cd ${RoI_ROOT}
 	./model/pretrained_model/resnet_v1_101-0000.params
 	```
 
-    Start training (we use the Light-head R-CNN + RoI Transformer for example, you may choose other models)
+    Start training (we use the Light-head R-CNN + RoI Transformer (without FPN) for example, you may choose other models)
 
     ```
       sh train_dota_light_RoITransformer.sh
