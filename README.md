@@ -44,7 +44,7 @@ git clone git@github.com:dingjiansw101/RoITransformer_DOTA.git
 	```
 	3.2 Copy the c++ operators to MXNet source
 	```
-	cp fpn/operator_cxx/* ${MXNET_ROOT}/src/operator/contrib
+	cp ${RoI_ROOT}/fpn/operator_cxx/* ${MXNET_ROOT}/src/operator/contrib
 	```
 	3.3 Compile MXNet
 	```
