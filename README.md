@@ -41,7 +41,7 @@ git clone git@github.com:dingjiansw101/RoITransformer_DOTA.git
 	```
 	3.2 Copy the c++ operators to MXNet source
 	```
-	cp fpn/operator_cxx/* mxnet/src/operator/contrib
+	cp fpn/operator_cxx/* ${MXNET_ROOT}/src/operator/contrib
 	```
 	3.3 Compile MXNet
 	```
@@ -64,6 +64,8 @@ git clone git@github.com:dingjiansw101/RoITransformer_DOTA.git
     cd ${RoI_ROOT}/dota_kit
     swig -c++ -python polyiou.i
     python setup.py build_ext --inplace
+    cd ${RoI_ROOT}/dota_kit/poly_nms_gpu
+    make -j16
     ```
 
 ## Prepare DOTA Data:
