@@ -29,24 +29,16 @@ git clone git@github.com:dingjiansw101/RoITransformer_DOTA.git
 
 	**Note: The MXNet's Custom Op cannot execute parallelly using multi-gpus after this [PR](https://github.com/apache/incubator-mxnet/pull/6928). We strongly suggest the user rollback to version [MXNet@(commit 998378a)](https://github.com/dmlc/mxnet/tree/998378a) for training (following Section 3.2 - 3.5).**
 
-	***Quick start***
+	***Build from source (Since there are custom c++ operators, We need to complie the MXNet from source.)***
 
-	3.1 Install MXNet and all dependencies by
-	```
-	pip install -r requirements.txt
-	```
-	If there is no other error message, MXNet should be installed successfully.
-
-	***Build from source (alternative way)***
-
-	3.2 Clone MXNet and checkout to [MXNet@(commit 998378a)](https://github.com/dmlc/mxnet/tree/998378a) by
+	3.1 Clone MXNet and checkout to [MXNet@(commit 998378a)](https://github.com/dmlc/mxnet/tree/998378a) by
 	```
 	git clone --recursive https://github.com/dmlc/mxnet.git
 	git checkout 998378a
 	git submodule update
 	# if it's the first time to checkout, just use: git submodule update --init --recursive
 	```
-	3.3 Copy the c++ operators to MXNet source (Since there are custom c++ operators, We need to complie the MXNet source.)
+	3.2 Copy the c++ operators to MXNet source
 	```
 	cp fpn/operator_cxx/* mxnet/src/operator/contrib
 	```
@@ -55,7 +47,7 @@ git clone git@github.com:dingjiansw101/RoITransformer_DOTA.git
 	cd ${MXNET_ROOT}
 	make -j $(nproc) USE_OPENCV=1 USE_BLAS=openblas USE_CUDA=1 USE_CUDA_PATH=/usr/local/cuda USE_CUDNN=1
 	```
-	3.4 Install the MXNet Python (python 2.7) binding by
+	3.4 Install the MXNet Python binding by
 
 	***Note: If you will actively switch between different versions of MXNet, please follow 3.5 instead of 3.4***
 	```
@@ -66,6 +58,7 @@ git clone git@github.com:dingjiansw101/RoITransformer_DOTA.git
 
 4.complie dota_kit
     ```
+    cd dota_kit
     sudo apt-get install swig
     swig -c++ -python polyiou.i
     python setup.py build_ext --inplace
