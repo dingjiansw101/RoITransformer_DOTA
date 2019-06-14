@@ -64,8 +64,12 @@ git clone git@github.com:dingjiansw101/RoITransformer_DOTA.git
 	```
 	3.5 For advanced users, you may put your Python packge into `./external/mxnet/$(YOUR_MXNET_PACKAGE)`, and modify `MXNET_VERSION` in `./experiments/rfcn/cfgs/*.yaml` to `$(YOUR_MXNET_PACKAGE)`. Thus you can switch among different versions of MXNet quickly.
 
-complie dota_kit
-
+4.complie dota_kit
+    ```
+    sudo apt-get install swig
+    swig -c++ -python polyiou.i
+    python setup.py build_ext --inplace
+    ```
 
 ## Prepare DOTA Data:
 
@@ -78,7 +82,6 @@ complie dota_kit
    path_to_data/val/images,
    path_to_data/val/labelTxt,
    path_to_data/test/images
-
    cd prepare_data
    python prepare_data.py --data_path path_to_data --num_process 32
    ```
@@ -87,7 +90,8 @@ complie dota_kit
    mkdir data
    cd data
    ln -s path_to_data dota_1024
-    ```
+   ```
+
 ## Pretrained Models
 
 We provide trained convnet models.
