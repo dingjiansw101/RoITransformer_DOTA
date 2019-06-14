@@ -4,8 +4,6 @@ This code is based on deformable convolution network
 
 mmdetection version is on the way
 
-Since there are custom c++ operators, We need to complie the MXNet source.
-
 ## Requirements: Software
 
 1. MXNet from [the offical repository](https://github.com/dmlc/mxnet).
@@ -20,9 +18,9 @@ Since there are custom c++ operators, We need to complie the MXNet source.
 
 ## Installation
 
-1. Clone the Deformable ConvNets repository, and we'll call the directory that you cloned Deformable-ConvNets as ${DCN_ROOT}.
+1. Clone the RoI Transformer repository.
 ```
-git clone https://github.com/msracver/Deformable-ConvNets.git
+git clone git@github.com:dingjiansw101/RoITransformer_DOTA.git
 ```
 
 2. For Windows users, run ``cmd .\init.bat``. For Linux user, run `sh ./init.sh`. The scripts will build cython module automatically and create some folders.
@@ -48,7 +46,7 @@ git clone https://github.com/msracver/Deformable-ConvNets.git
 	git submodule update
 	# if it's the first time to checkout, just use: git submodule update --init --recursive
 	```
-	3.3 Copy the c++ operators to MXNet source
+	3.3 Copy the c++ operators to MXNet source (Since there are custom c++ operators, We need to complie the MXNet source.)
 	```
 	cp fpn/operator_cxx/* mxnet/src/operator/contrib
 	```
@@ -71,9 +69,10 @@ complie dota_kit
 
 ## Prepare DOTA Data:
 
-1.prepare script
+1.Prepare script
    put your original dota data (before split) in path_to_data
    make sure it looks like
+   ```
    path_to_data/train/images,
    path_to_data/train/labelTxt,
    path_to_data/val/images,
@@ -82,12 +81,13 @@ complie dota_kit
 
    cd prepare_data
    python prepare_data.py --data_path path_to_data --num_process 32
-
-2.soft link
+   ```
+2.Create soft link
+   ```
    mkdir data
    cd data
    ln -s path_to_data dota_1024
-
+    ```
 ## Pretrained Models
 
 We provide trained convnet models.
@@ -100,11 +100,14 @@ We provide trained convnet models.
         ./output/fpn/DOTA/resnet_v1_101_dota_rotbox_light_head_RoITransformer_trainval_fpn_end2end/train/fpn_DOTA_oriented-0008.params
     ```
 ## Training & Testing
+```
 1.training
   sh train_dota_light_fpn_RoITransformer.sh
 
 2.testing
   sh test_dota_light_fpn_RoITransformer.sh
+```
+
 
 ---------------------------------------------------
 
