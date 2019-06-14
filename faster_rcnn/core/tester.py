@@ -27,7 +27,7 @@ from bbox.bbox_transform import polygonToRotRectangle_batch, RotBox2Polys_multi_
 from bbox.bbox_transform import dbboxtransform3_inv_warp, xyhs2polys, xyhs2polys_muli_class
 from bbox.bbox_transform import dbbox_transform2_inv, dbbox_transform2_inv_new, RotBox2Polys
 from dota_kit.ResultMerge import py_cpu_nms_poly, py_cpu_nms_poly_fast
-from poly_nms_gpu.nms import poly_gpu_nms_wrapper
+from dota_kit.poly_nms_gpu.nms import poly_gpu_nms_wrapper
 import cv2
 import pdb
 
