@@ -1,6 +1,9 @@
-This is the official code for [Learning RoI Transformer for Detecting Oriented Objects in Aerial Images](https://arxiv.org/abs/1812.00155)
+## Disclaimer
+This is the official repo of paper [Learning RoI Transformer for Detecting Oriented Objects in Aerial Images](https://arxiv.org/abs/1812.00155)
 
 This code is based on deformable convolution network
+
+We refactored the code and retrained the model. There are slight differences in the final accuracy.
 
 mmdetection version is on the way
 
