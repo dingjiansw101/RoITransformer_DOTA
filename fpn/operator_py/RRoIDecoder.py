@@ -14,7 +14,7 @@ from bbox.bbox_transform import bbox_pred, clip_boxes
 from rpn.generate_anchor import generate_anchors
 from nms.nms import gpu_nms_wrapper
 # from poly_nms_gpu.poly_nms import poly_gpu_nms
-from dota_kit.poly_nm   s_gpu.nms import poly_gpu_nms_wrapper
+from dota_kit.poly_nms_gpu.nms import poly_gpu_nms_wrapper
 from bbox.bbox_transform import dbbox_transform2_inv_warp
 from bbox.bbox_transform import clip_polys, RotBox2Polys, polygonToRotRectangle_batch, choose_best_Rroi_batch
 import cPickle
