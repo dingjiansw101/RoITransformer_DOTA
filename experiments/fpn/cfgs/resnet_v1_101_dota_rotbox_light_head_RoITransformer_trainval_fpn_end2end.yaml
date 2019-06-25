@@ -221,4 +221,4 @@ TEST:
   USE_SOFTNMS: true
   SOFTNMS_THRESH: 0.6
 
-  save_img_path: '/home/dj/data/vis_debug_Rroi_fpn'
+  save_img_path: 'data/vis_debug_Rroi_fpn'

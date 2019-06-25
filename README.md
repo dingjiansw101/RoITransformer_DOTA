@@ -24,7 +24,7 @@ mmdetection version is on the way
 1. Clone the RoI Transformer repository, and we'll call the directory that you cloned RoI Transformer as ${RoI_ROOT}
 
 ```
-git clone git@github.com:dingjiansw101/RoITransformer_DOTA.git
+git clone https://github.com/dingjiansw101/RoITransformer_DOTA.git
 ```
 
 2. For Windows users, run ``cmd .\init.bat``. For Linux user, run `sh ./init.sh`. The scripts will build cython module automatically and create some folders.
@@ -60,7 +60,7 @@ git clone git@github.com:dingjiansw101/RoITransformer_DOTA.git
 	```
 	3.5 For advanced users, you may put your Python packge into `./external/mxnet/$(YOUR_MXNET_PACKAGE)`, and modify `MXNET_VERSION` in `./experiments/rfcn/cfgs/*.yaml` to `$(YOUR_MXNET_PACKAGE)`. Thus you can switch among different versions of MXNet quickly.
 
-4. complie dota_kit
+4. Compile dota_kit
 
     ```
     sudo apt-get install swig
@@ -90,7 +90,7 @@ git clone git@github.com:dingjiansw101/RoITransformer_DOTA.git
 
    ```
    cd ${RoI_ROOT}
-   mkdir data
+   mkdir -p data
    cd data
    ln -s path_to_data dota_1024
    ```
