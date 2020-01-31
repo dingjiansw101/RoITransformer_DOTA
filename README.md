@@ -5,7 +5,7 @@ This code is based on deformable convolution network
 
 We refactored the code and retrained the model. There are slight differences in the final accuracy.
 
-mmdetection version is on the way
+[mmdetection version] (https://github.com/dingjiansw101/AerialDetection) is finished, it is more faster and accurate, we recommend you to use the new version.
 
 ## Requirements: Software
 
